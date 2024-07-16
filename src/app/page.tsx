@@ -12,7 +12,7 @@ export default function Chat() {
       <h1 className='text-5xl text-center my-3'>Tu Asistente</h1>
       {messages.map((m) => (
         <div key={m.id} className='text-blue-600'>
-          {m.role === 'user' ? 'Vos: ' : 'AI: '}
+          {m.role === 'user' ? 'User: ' : 'AI: '}
           {m.content}
         </div>
       ))}

@@ -10,7 +10,7 @@ const perplexity = new OpenAI({
 export async function POST(req: Request) {
   try {
     // Extract the `messages` from the body of the request
-    const [{ messages ,}] = await req.json();
+    const { messages } = await req.json();
 
     // Request the OpenAI-compatible API for the response based on the prompt
     const response = await perplexity.chat.completions.create({
