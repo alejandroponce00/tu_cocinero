@@ -17,7 +17,7 @@ export async function POST(req: Request) {
       model: 'llama-3-sonar-small-32k-chat',
       stream: true,
       messages: messages,
-      max_tokens: 20,
+      max_tokens: 300,
       
     });
    
