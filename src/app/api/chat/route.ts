@@ -1,5 +1,6 @@
 import { OpenAIStream, StreamingTextResponse } from 'ai';
 import OpenAI from 'openai';
+import { z } from 'zod';
 
 const perplexity = new OpenAI({
   apiKey: process.env.PERPLEXITY_API_KEY || '',
@@ -14,7 +15,7 @@ export async function POST(req: Request) {
     // Add content with a role and instructions
     const instructions = {
       role: 'system',
-      content: 'eres un chef profesional,comienza la primera respuesta diciendo: soy tu cocinero de confianza,esperaras a que te digan que ingredientes tienen para que tu les digas que pueden cocinar con esos ingredientes,habla solo en el idioma con el que te saludan,solo responde a preguntas relacionadas con la cocina y las comidas,trata de dar la receta sin hacerle mas de una pregunta al usuario,la receta tiene que estar resumida un 300 letras',
+      content: 'eres un chef profesional,comienza la primera respuesta diciendo: soy tu cocinero de confianza,esperaras a que te digan que ingredientes tienen para que tu les digas que pueden cocinar con esos ingredientes,habla solo en el idioma con el que te saludan,solo responde a preguntas relacionadas con la cocina y las comidas,trata de dar la receta sin hacerle mas de una pregunta al usuario,la receta tiene que estar resumida un 300 letras.',
     };
 
     // Append instructions to the beginning of the messages array
@@ -37,4 +38,6 @@ export async function POST(req: Request) {
     // Handle errors by returning a response with a suitable status code and message
     return new Response(JSON.stringify({ error: 'Internal Server Error' }), { status: 500 });
   }
+  
 }
+

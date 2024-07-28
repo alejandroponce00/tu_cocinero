@@ -31,7 +31,7 @@ export default function Chat() {
       <form onSubmit={handleSubmit} className='flex'>
         <input
           value={input}
-          placeholder="Pregúntame algo"
+          placeholder="A cocinar!"
           onChange={handleInputChange}
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         />
