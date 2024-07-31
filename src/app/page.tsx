@@ -3,17 +3,24 @@
 import { useChat } from 'ai/react';
 import Image from "next/image";
 import Fondo from './components/fondo/fondo';
+import { FlipWords } from "../app/components/ui/flip-words";
+
+
 
 
 
 export default function Chat() {
   const { messages, input, handleInputChange, handleSubmit,isLoading } = useChat();
-
+  const words = ["Cocinero", "Chef", "Asistente"];
+  const letras = ["Pastas", "Ensaladas", "Postres"];
   return (
     <div className='text-center rounded-lg p-4 mx-2.5 '>
      <Fondo />
-      <h1 className='text-5xl text-center my-3 text-slate-800 font-bold mb-10'>Tu Cocinero Virtual</h1>
-      <h6 className=' text-2xl text-center my-3 text-slate-600 mb-10'>Dime que ingredientes tienes y te diré que puedes cocinar..</h6>
+      <h1 className='text-5xl text-center my-3 text-slate-800 font-bold mb-10'>Tu Cocinero   Virtual</h1>
+    <h4 className='text-4xl font-mono '><FlipWords words={letras} /><br /></h4> 
+      <h6 className=' text-2xl text-center my-3 text-black mb-10'>Dime que ingredientes tienes y te diré que puedes cocinar..</h6>
+
+      
     
       <div className='mb-4 max-h-96 h-full overflow-y-scroll '>
       

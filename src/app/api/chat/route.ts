@@ -20,6 +20,7 @@ export async function POST(req: Request) {
 
     // Append instructions to the beginning of the messages array
     const enhancedMessages = [instructions, ...messages];
+    const words = ["Asistente", "Experto", "Sabelotodo"];
 
     // Request the OpenAI-compatible API for the response based on the prompt
     const response = await perplexity.chat.completions.create({
