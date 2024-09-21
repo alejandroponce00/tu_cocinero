@@ -63,6 +63,8 @@ export default function Chat() {
           enviar
         </button>
       </form>
+      <footer className='mt-20 text-slate-600'>creado por Alejandro Ponce</footer>
+   
     </div>
   );
 }
