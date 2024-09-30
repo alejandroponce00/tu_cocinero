@@ -1,3 +1,6 @@
+<center> <h1>Tu_cocinero app</h1> </center>
+
+![Link an image.](/public/tu_cocinero.png)
 Este proyecto, desarrollado durante la hackatón de Vercel, utiliza Next.js, Vercel SDK y la API de Perplexicity para ofrecer una solución innovadora a la típica pregunta culinaria: ¿Qué puedo cocinar con lo que tengo? El usuario simplemente ingresa los ingredientes disponibles, y nuestro asistente virtual, un chef profesional en la nube, devuelve una lista de recetas deliciosas que pueden prepararse con esos ingredientes específicos.
 
 Características
