@@ -24,7 +24,7 @@ export async function POST(req: Request) {
 
     // Request the OpenAI-compatible API for the response based on the prompt
     const response = await perplexity.chat.completions.create({
-      model: 'llama-3.1-sonar-small-128k-online',
+      model: 'sonar',
       stream: true,
       messages: enhancedMessages,
       max_tokens: 100,
